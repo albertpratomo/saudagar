@@ -1,10 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "albertpratomo/saudagar",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "An e-commerce web app.",
     "keywords": [
-        "framework",
-        "laravel"
+        "e-commerce",
+        "cms",
+        "laravel",
+        "vue"
     ],
     "license": "MIT",
     "require": {
