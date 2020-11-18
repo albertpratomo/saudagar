@@ -2,6 +2,7 @@
 
 namespace Lit\Config;
 
+use Lit\Config\Form\Pages\HomeConfig;
 use Ignite\Application\Navigation\Config;
 use Ignite\Application\Navigation\Navigation;
 
@@ -36,9 +37,9 @@ class NavigationConfig extends Config
     public function main(Navigation $nav)
     {
         $nav->section([
-            $nav->title('Models'),
+            $nav->title('Pages'),
 
-            //
+            $nav->preset(HomeConfig::class, ['icon' => fa('home')]),
         ]);
     }
 }
