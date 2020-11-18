@@ -27,6 +27,20 @@ class HomeConfig extends FormConfig
             $form->input('title');
 
             $form->wysiwyg('body');
+
+            $form->block('sections')->repeatables(function($repeatables) {
+                $repeatables->add('section', function($form, $preview) {
+                    $preview->col('{name}');
+        
+                    $form->input('name');
+                    $form->select('section_type')
+                        ->options([
+                            1 => 'A',
+                            2 => 'B',
+                        ]);
+                    $form->input('title');
+                });
+            });
         });
     }
 }
