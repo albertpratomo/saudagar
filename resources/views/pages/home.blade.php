@@ -4,10 +4,11 @@ use Lit\Config\Form\Pages\HomeConfig;
 $p = HomeConfig::load();
 @endphp
 
-{{$p->title}}
+Title: {{$p->title}} <br><br>
 
-{!!$p->body!!}
+Body: {!!$p->body!!} <br><br>
 
+Sections: <br>
 @foreach($p->sections as $section)
-    {{ "$section->name ($section->section_type): $section->title" }} <br>
+    {{ "$section->section_type: $section->title $section->body" }} <br>
 @endforeach

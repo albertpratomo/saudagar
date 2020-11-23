@@ -4,6 +4,7 @@ namespace Lit\Config\Form\Pages;
 
 use Ignite\Crud\CrudShow;
 use Lit\Config\Form\FormConfig;
+use Lit\Repeatables\SectionRepeatable;
 use Lit\Http\Controllers\Form\Pages\HomeController;
 
 class HomeConfig extends FormConfig
@@ -29,17 +30,7 @@ class HomeConfig extends FormConfig
             $form->wysiwyg('body');
 
             $form->block('sections')->repeatables(function($repeatables) {
-                $repeatables->add('section', function($form, $preview) {
-                    $preview->col('{name}');
-        
-                    $form->input('name');
-                    $form->select('section_type')
-                        ->options([
-                            1 => 'A',
-                            2 => 'B',
-                        ]);
-                    $form->input('title');
-                });
+                $repeatables->add(SectionRepeatable::class);
             });
         });
     }
