@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <h1>Home</h1>
+    <h1>This is Vue 3!</h1>
 
-        {{ page }}
-    </div>
+    {{ page }}
 </template>
 
 <script>
